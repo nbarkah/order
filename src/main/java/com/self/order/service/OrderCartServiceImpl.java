@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Service
 public class OrderCartServiceImpl implements OrderCartService {
-    private OrderCartRepository orderCartRepository;
+    private final OrderCartRepository orderCartRepository;
 
     public OrderCartServiceImpl(OrderCartRepository orderCartRepository) {
         this.orderCartRepository = orderCartRepository;
