@@ -1,0 +1,29 @@
+service:
+  name: OrderCart
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/order?useSSL=false&serverTimezone=Asia/Jakarta&allowPublicKeyRetrieval=true
+    username: user
+    password: user12345
+    hikari:
+      minimum-idle: 1 #minimum number of idle connections maintained in a connection pool
+      maximum-pool-size: 15 #maximum pool size
+      connection-timeout: 30000 #maximum number of milliseconds that a client will wait for a connection
+      idle-timeout: 20000
+      pool-name: pool-master
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+
+logging:
+  level:
+    root: info
