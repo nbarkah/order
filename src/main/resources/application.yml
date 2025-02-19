@@ -27,3 +27,7 @@ spring:
 logging:
   level:
     root: info
+
+springdoc:
+  swagger-ui:
+    path: /v1/order-docs
